@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -24,10 +25,11 @@
 									<a href="#">Dropdown</a>
 									<ul>
 										<li><a href="#Location">Location</a></li>
-										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#hours">Hours</a></li>
+										<li><a href="#contact">Contact</a></li>
 									</ul>
 								</li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="no-sidebar.html">Messages</a></li>
 							</ul>
 						</nav>
 
@@ -89,11 +91,15 @@
 					<div class="container">
 						<div class="row">
 							<section class="col-6 col-12-narrower">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/num1.png" alt="" /></a>
+								<div class="box post" id="hours">
+									<a href="#" class="image left"><img src="images/hours.png" alt="" /></a>
 									<div class="inner">
-										<h3>The First Thing</h3>
-										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+										<h3>Hours</h3>
+										<h5>Monday-Friday  9:00am-6:00pm <br>
+											Saturday  9:00am-4:00pm <br>
+											Sunday	Closed
+										
+										</h5>
 									</div>
 								</div>
 							</section>
@@ -126,6 +132,26 @@
 									</div>
 								</div>
 							</section>
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="#" class="image left"><img src="images/rims.png" alt="" /></a>
+									<div class="inner">
+										<h3>The Fifth Thing</h3>
+										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed.
+											Suspendisse eu.</p>
+									</div>
+								</div>
+							</section>
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="#" class="image left"><img src="images/rims2.png" alt="" /></a>
+									<div class="inner">
+										<h3>The Sixth Thing</h3>
+										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed.
+											Suspendisse eu.</p>
+									</div>
+								</div>
+							</section>
 						</div>
 					</div>
 				</section>
@@ -133,7 +159,7 @@
 
 			<!-- Footer -->
 				<div id="footer">
-					<div class="container">
+					<div class="container" id="contact">
 						<div class="row">
 							
 							<section class="col-8 col-12-narrower">
@@ -141,17 +167,17 @@
 								<form>
 									<div class="row gtr-50">
 										<div class="col-6 col-12-mobilep">
-											<input type="text" name="name" id="name" placeholder="Name" />
+											<input type="text" name="name" id="nameInput" placeholder="Name" />
 										</div>
 										<div class="col-6 col-12-mobilep">
-											<input type="text" name="phone" id="email" placeholder="phone (xxx) xxx-xxxx" />
+											<input type="text" name="phone" id="phoneInput" placeholder="phone (xxx) xxx-xxxx" />
 										</div>
 										<div class="col-12">
-											<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+											<textarea name="message" id="messageInput" placeholder="Message" rows="5"></textarea>
 										</div>
 										<div class="col-12">
 											<ul class="actions">
-												<li><input type="submit" class="button alt" value="Send Message" /></li>
+												<li><input type="submit" class="button alt" id="storeInfo" value="Send Message" action="no-sidebar.html" /></li>
 											</ul>
 										</div>
 									</div>
@@ -183,6 +209,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="index.js"></script>
 
 	</body>
 </html>
